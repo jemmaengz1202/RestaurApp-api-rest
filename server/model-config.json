@@ -34,5 +34,29 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Cliente": {
+    "dataSource": "database",
+    "public": true
+  },
+  "Mesa": {
+    "dataSource": "database",
+    "public": true
+  },
+  "Producto": {
+    "dataSource": "database",
+    "public": true
+  },
+  "Usuario": {
+    "dataSource": "database",
+    "public": true
+  },
+  "OrdenDetalle": {
+    "dataSource": "database",
+    "public": true
+  },
+  "Orden": {
+    "dataSource": "database",
+    "public": true
   }
 }

@@ -1,0 +1,25 @@
+{
+  "name": "Orden",
+  "plural": "ordenes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "inicio": {
+      "type": "date",
+      "required": false
+    },
+    "cierre": {
+      "type": "date"
+    },
+    "importe": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

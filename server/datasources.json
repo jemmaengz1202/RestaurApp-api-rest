@@ -1,16 +1,16 @@
 {
-    "db": {
-        "name": "db",
-        "connector": "memory"
-    },
-    "database": {
-        "host": "127.0.0.1",
-        "port": 5432,
-        "url": "",
-        "database": "restaurant_api_db",
-        "password": "Res@#_{}",
-        "name": "database",
-        "user": "restaurant_api_db_user",
-        "connector": "postgresql"
-    }
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "database": {
+    "host": "127.0.0.1",
+    "port": 5432,
+    "url": "",
+    "database": "restaurant_api_db",
+    "password": "Res@#_{}",
+    "name": "database",
+    "user": "restaurant_api_db_user",
+    "connector": "postgresql"
+  }
 }
