@@ -19,7 +19,40 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "cliente": {
+      "type": "belongsTo",
+      "model": "Cliente",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "mesa": {
+      "type": "belongsTo",
+      "model": "Mesa",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "ordenDetalles": {
+      "type": "hasMany",
+      "model": "OrdenDetalle",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
