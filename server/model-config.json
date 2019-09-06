@@ -58,5 +58,9 @@
   "Orden": {
     "dataSource": "database",
     "public": true
+  },
+  "Categoria": {
+    "dataSource": "database",
+    "public": true
   }
 }
