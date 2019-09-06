@@ -23,7 +23,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "categoria": {
+      "type": "belongsTo",
+      "model": "Categoria",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
