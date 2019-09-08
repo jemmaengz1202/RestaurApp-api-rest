@@ -21,6 +21,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "producto": {
+      "type": "belongsTo",
+      "model": "Producto",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [
@@ -34,6 +42,12 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$owner",
       "permission": "ALLOW"
     }
   ],

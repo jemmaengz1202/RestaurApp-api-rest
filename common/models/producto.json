@@ -31,6 +31,11 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "ordenDetalles": {
+      "type": "hasMany",
+      "model": "OrdenDetalle",
+      "foreignKey": ""
     }
   },
   "acls": [
@@ -44,6 +49,12 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "admin",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     }
   ],
