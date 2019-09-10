@@ -14,32 +14,27 @@ module.exports = function(app, cb) {
   const RoleMapping = app.models.RoleMapping;
 
   Usuario.findOne({where: {username: 'admin'}}, (err, user) => {
-      if (!user) {
-          Usuario.create(
-              {username: 'admin', email: 'admin@admin.com',
-               nombre  : 'admin',
-               password: process.env.ADMIN_PASSWORD || 'admin'}
-            , function(err, user) {
-              if (err) return cb(err);
-          
-              Role.create({
-                name: 'admin'
-              }, function(err, role) {
-                if (err) cb(err);
-        
-                role.principals.create({
-                  principalType: RoleMapping.USER,
-                  principalId  : user.id
-                }, function(err, principal) {
-                  cb(err);
-                });
-
-                console.log('Creado usuario admin por primera vez.');
-              });
-            }
-          );
-      }
-      if(err) cb(err);
+    if (!user) {
+      Usuario.create(
+        {username: 'admin', email: 'admin@admin.com',
+          nombre: 'admin',
+          password: process.env.ADMIN_PASSWORD || 'admin'}, (err, user) => {
+        if (err) return cb(err);
+        Role.create({
+          name: 'admin',
+        }, (err, role) => {
+          if (err) cb(err);
+          role.principals.create({
+            principalType: RoleMapping.USER,
+            principalId: user.id,
+          }, (err, principal) => {
+            cb(err);
+          });
+          console.log('Creado usuario admin por primera vez.');
+        });
+      });
+    }
+    if (err) cb(err);
   });
 
   process.nextTick(cb);
