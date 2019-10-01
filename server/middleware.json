@@ -30,14 +30,19 @@
       "enabled": false
     }
   },
+  "session:before": {
+    "cookie-parser": {
+      "params": "${cookieSecret}"
+    }
+  },
   "session": {},
-  "auth": {},
+  "auth": {
+    "loopback#token": {}
+  },
   "parse": {},
   "routes": {
     "loopback#rest": {
-      "paths": [
-        "${restApiRoot}"
-      ]
+      "paths": ["${restApiRoot}"]
     }
   },
   "files": {
