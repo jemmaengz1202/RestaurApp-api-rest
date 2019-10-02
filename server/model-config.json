@@ -62,5 +62,9 @@
   "Categoria": {
     "dataSource": "database",
     "public": true
+  },
+  "attachment": {
+    "dataSource": "storage",
+    "public": true
   }
 }
