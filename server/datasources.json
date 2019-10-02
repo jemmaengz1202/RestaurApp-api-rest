@@ -12,5 +12,12 @@
     "name": "database",
     "user": "restaurant_api_db_user",
     "connector": "postgresql"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./files",
+    "nameConflict": "makeUnique"
   }
 }

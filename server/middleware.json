@@ -35,24 +35,29 @@
       "params": "${cookieSecret}"
     }
   },
-  "session": {},
   "auth": {
     "loopback#token": {}
   },
   "parse": {},
   "routes": {
     "loopback#rest": {
-      "paths": ["${restApiRoot}"]
+      "paths": [
+        "${restApiRoot}"
+      ]
     }
   },
   "files": {
     "loopback#static": [
       {
-        "paths": ["/"],
+        "paths": [
+          "/"
+        ],
         "params": "$!../client/build"
       },
       {
-        "paths": ["*"],
+        "paths": [
+          "*"
+        ],
         "params": "$!../client/build"
       }
     ]
