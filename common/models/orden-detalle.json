@@ -10,6 +10,9 @@
     "cantidad": {
       "type": "number",
       "required": true
+    },
+    "anotaciones": {
+      "type": "string"
     }
   },
   "validations": [],
