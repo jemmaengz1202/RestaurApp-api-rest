@@ -3,7 +3,7 @@
 /*
   Crear cliente por default, con el id 1 y que será utilizado para todas las órdenes no registradas.
 */
-module.exports = function(app, cb) {
+module.exports.addDefaultCliente = function(app, cb) {
   const Cliente = app.models.Cliente;
 
   Cliente.findById(1, (err, cliente) => {
@@ -23,6 +23,4 @@ module.exports = function(app, cb) {
     }
     if (err) cb(err);
   });
-
-  process.nextTick(cb);
 };

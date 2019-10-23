@@ -8,9 +8,9 @@ require('dotenv').config();
   en la variable de entorno ADMIN_PASSWORD o 'admin', de no
   estar disponible.
 */
-module.exports = function(app, cb) {
-  const Usuario     = app.models.Usuario;
-  const Role        = app.models.Role;
+module.exports.addDefaultAdmin = function(app, cb) {
+  const Usuario = app.models.Usuario;
+  const Role = app.models.Role;
   const RoleMapping = app.models.RoleMapping;
 
   Usuario.findOne({where: {username: 'admin'}}, (err, user) => {
@@ -19,23 +19,22 @@ module.exports = function(app, cb) {
         {username: 'admin', email: 'admin@admin.com',
           nombre: 'admin',
           password: process.env.ADMIN_PASSWORD || 'admin'}, (err, user) => {
-        if (err) return cb(err);
-        Role.create({
-          name: 'admin',
-        }, (err, role) => {
-          if (err) cb(err);
-          role.principals.create({
-            principalType: RoleMapping.USER,
-            principalId: user.id,
-          }, (err, principal) => {
-            cb(err);
+          if (err) return cb(err);
+          Role.create({
+            name: 'admin',
+          }, (err, role) => {
+            if (err) cb(err);
+            role.principals.create({
+              principalType: RoleMapping.USER,
+              principalId: user.id,
+            }, (err, principal) => {
+              if (err) cb(err);
+              console.log('Creado usuario admin por primera vez.');
+            });
           });
-          console.log('Creado usuario admin por primera vez.');
-        });
-      });
+        }
+      );
     }
     if (err) cb(err);
   });
-
-  process.nextTick(cb);
 };
