@@ -16,6 +16,10 @@
     },
     "importe": {
       "type": "number"
+    },
+    "preparada": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
