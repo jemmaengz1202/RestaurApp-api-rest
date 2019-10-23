@@ -35,7 +35,33 @@
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "getRole"
     }
   ],
-  "methods": {}
+  "methods": {
+    "prototype.getRole": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "object",
+          "root": true,
+          "description": "Response of role"
+        }
+      ],
+      "description": "Get role of a user",
+      "http": [
+        {
+          "path": "/get-role",
+          "verb": "get"
+        }
+      ]
+    }
+  }
 }
