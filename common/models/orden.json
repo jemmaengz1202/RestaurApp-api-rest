@@ -75,6 +75,12 @@
       "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "cocinero",
+      "permission": "ALLOW"
     }
   ],
   "methods": {}

@@ -62,7 +62,7 @@
     {
       "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "mesero",
       "permission": "ALLOW"
     }
   ],
