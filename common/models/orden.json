@@ -83,5 +83,24 @@
       "permission": "ALLOW"
     }
   ],
-  "methods": {}
+  "methods": {
+    "prototype.setPreparada": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "data",
+          "type": "object",
+          "root": true,
+          "description": "Object that returns ok true or error"
+        }
+      ],
+      "description": "Sets 'preparada' property to true",
+      "http": [
+        {
+          "path": "/set-preparada",
+          "verb": "post"
+        }
+      ]
+    }
+  }
 }
