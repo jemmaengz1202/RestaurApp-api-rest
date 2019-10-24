@@ -81,6 +81,13 @@
       "principalType": "ROLE",
       "principalId": "cocinero",
       "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "cocinero",
+      "permission": "ALLOW",
+      "property": "setPreparada"
     }
   ],
   "methods": {
