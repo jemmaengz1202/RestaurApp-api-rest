@@ -46,7 +46,6 @@
   ],
   "methods": {
     "prototype.getRole": {
-      "accepts": [],
       "returns": [
         {
           "arg": "data",
@@ -59,6 +58,24 @@
       "http": [
         {
           "path": "/get-role",
+          "verb": "get"
+        }
+      ]
+    },
+    "getWithRole": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "users",
+          "type": "array",
+          "root": true,
+          "description": "Array of users with roles"
+        }
+      ],
+      "description": "Get user names and roles",
+      "http": [
+        {
+          "path": "/get-with-roles",
           "verb": "get"
         }
       ]

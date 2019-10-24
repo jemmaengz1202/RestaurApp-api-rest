@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../../server/server');
+const {promisify} = require('util');
 
 module.exports = function(Usuario) {
   Usuario.afterRemote('login', function(ctx) {
@@ -58,5 +59,45 @@ module.exports = function(Usuario) {
         error: err,
       };
     }
+  };
+
+  /**
+ * Get user names and roles
+ */
+
+  Usuario.getWithRole = async function() {
+    const Role = app.models.Role;
+    const RoleMapping = app.models.RoleMapping;
+    const getUsuariosPromisified = promisify(Usuario.find.bind(Usuario));
+    const users = await getUsuariosPromisified();
+    const promiseRol = userId => {
+      return new Promise((resolve, reject) => {
+        Role.getRoles(
+          {principalType: RoleMapping.USER, principalId: userId},
+          (err, roles) => {
+            if (err) reject(err);
+            if (roles.includes(1)) {
+              resolve('admin');
+            } else if (roles.includes(2)) {
+              resolve('mesero');
+            } else if (roles.includes(3)) {
+              resolve('cocinero');
+            } else {
+              resolve('none');
+            }
+          }
+        );
+      });
+    };
+    const usersArray = [];
+    for (const user of users) {
+      const rol = await promiseRol(user.id);
+      usersArray.push({
+        id: user.id,
+        nombre: user.nombre,
+        rol: rol,
+      });
+    }
+    return usersArray;
   };
 };
