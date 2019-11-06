@@ -22,6 +22,14 @@ module.exports = function(Usuario) {
     return Promise.resolve();
   });
 
+  Usuario.observe('before save', function filterProperties(ctx, next) {
+    const oInstance = ctx.instance;
+
+    if (oInstance) oInstance.email = oInstance.email || Date.now() + 'a@b.cc';
+
+    next();
+  });
+
   /**
  * Get role of a user
  */
