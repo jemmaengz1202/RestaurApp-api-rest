@@ -9,6 +9,7 @@
     "mixins": [
       "loopback/common/mixins",
       "loopback/server/mixins",
+      "../node_modules/loopback-paginator/lib",
       "../common/mixins",
       "./mixins"
     ]
@@ -64,7 +65,10 @@
   },
   "Producto": {
     "dataSource": "database",
-    "public": true
+    "public": true,
+    "mixins": {
+      "Paginator": true
+    }
   },
   "Usuario": {
     "dataSource": "database",
