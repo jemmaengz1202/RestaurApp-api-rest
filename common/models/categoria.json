@@ -43,5 +43,8 @@
       "permission": "ALLOW"
     }
   ],
-  "methods": {}
+  "methods": {},
+  "mixins": {
+    "Paginator": true
+  }
 }

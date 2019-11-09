@@ -80,5 +80,8 @@
         }
       ]
     }
+  },
+  "mixins": {
+    "Paginator": true
   }
 }

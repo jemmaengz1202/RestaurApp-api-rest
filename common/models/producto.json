@@ -22,6 +22,9 @@
       "type": "string"
     }
   },
+  "mixins": {
+    "Paginator": true
+  },
   "validations": [],
   "relations": {
     "categoria": {

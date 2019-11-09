@@ -109,5 +109,8 @@
         }
       ]
     }
+  },
+  "mixins": {
+    "Paginator": true
   }
 }
