@@ -2,5 +2,37 @@
   "loopback-component-explorer": {
     "mountPath": "/__explorer",
     "generateOperationScopedModels": true
+  },
+  "loopback-full-text-search": {
+    "models": [
+      {
+        "name": "Categoria",
+        "fields": ["nombre"]
+      },
+      {
+        "name": "Cliente",
+        "fields": ["rfc", "nombre"]
+      },
+      {
+        "name": "Mesa",
+        "fields": ["nombre", "observaciones", "disponible"]
+      },
+      {
+        "name": "OrdenDetalle",
+        "fields": ["anotaciones"]
+      },
+      {
+        "name": "Orden",
+        "fields": ["importe"]
+      },
+      {
+        "name": "Producto",
+        "fields": ["nombre", "descripcion", "precio"]
+      },
+      {
+        "name": "Usuario",
+        "fields": ["nombre"]
+      }
+    ]
   }
 }
