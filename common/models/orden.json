@@ -15,7 +15,10 @@
       "type": "date"
     },
     "importe": {
-      "type": "number"
+      "type": "number",
+      "postgresql": {
+        "dataType": "NUMERIC(10,2)"
+      }
     },
     "preparada": {
       "type": "boolean",

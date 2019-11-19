@@ -13,7 +13,10 @@
     },
     "precio": {
       "type": "number",
-      "required": true
+      "required": true,
+      "postgresql": {
+        "dataType": "NUMERIC(10,2)"
+      }
     },
     "descripcion": {
       "type": "string"
