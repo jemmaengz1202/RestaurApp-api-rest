@@ -10,6 +10,7 @@
       "loopback/common/mixins",
       "loopback/server/mixins",
       "../node_modules/loopback-paginator/lib",
+      "../node_modules/loopback-softdelete",
       "../common/mixins",
       "./mixins"
     ]
