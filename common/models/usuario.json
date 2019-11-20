@@ -82,6 +82,7 @@
     }
   },
   "mixins": {
-    "Paginator": true
+    "Paginator": true,
+    "SoftDelete" : true
   }
 }
