@@ -27,6 +27,7 @@
     "loopback-connector-postgresql": "^3.8.0",
     "loopback-full-text-search": "^1.0.0",
     "loopback-paginator": "^2.0.0",
+    "loopback-softdelete": "^1.0.1",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.3.0"
   },
