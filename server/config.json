@@ -20,7 +20,7 @@
     "cors": false
   },
   "paginator": {
-    "limit": 5,
+    "limit": 9,
     "maxLimit": 300
   }
 }
