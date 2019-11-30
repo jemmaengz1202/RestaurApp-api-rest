@@ -52,7 +52,7 @@ module.exports = function(Usuario) {
             } else {
               resolve('none');
             }
-          }
+          },
         );
       });
     };
@@ -93,7 +93,7 @@ module.exports = function(Usuario) {
             } else {
               resolve('none');
             }
-          }
+          },
         );
       });
     };
@@ -104,6 +104,7 @@ module.exports = function(Usuario) {
         id: user.id,
         nombre: user.nombre,
         rol: rol,
+        imagenUrl: user.imagenUrl,
       });
     }
     return usersArray;
