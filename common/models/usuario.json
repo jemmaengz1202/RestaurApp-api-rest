@@ -6,6 +6,10 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Paginator": true,
+    "SoftDelete": true
+  },
   "properties": {
     "nombre": {
       "type": "string",
@@ -25,11 +29,11 @@
         "nestRemoting": true
       }
     },
-    "roles": { 
-      "type": "hasMany", 
-      "model": "Role", 
-      "foreignKey": "principalId", 
-      "through": "RoleMapping" 
+    "roles": {
+      "type": "hasMany",
+      "model": "Role",
+      "foreignKey": "principalId",
+      "through": "RoleMapping"
     }
   },
   "acls": [
@@ -89,9 +93,5 @@
         }
       ]
     }
-  },
-  "mixins": {
-    "Paginator": true,
-    "SoftDelete" : true
   }
 }

@@ -6,6 +6,10 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Paginator": true,
+    "SoftDelete": true
+  },
   "properties": {
     "nombre": {
       "type": "string",
@@ -24,10 +28,6 @@
     "imagenUrl": {
       "type": "string"
     }
-  },
-  "mixins": {
-    "Paginator": true,
-    "SoftDelete" : true
   },
   "validations": [],
   "relations": {

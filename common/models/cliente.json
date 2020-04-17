@@ -6,6 +6,10 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "Paginator": true,
+    "SoftDelete": true
+  },
   "properties": {
     "rfc": {
       "type": "string",
@@ -66,9 +70,5 @@
       "permission": "ALLOW"
     }
   ],
-  "methods": {},
-  "mixins": {
-    "Paginator": true,
-    "SoftDelete" : true
-  }
+  "methods": {}
 }
