@@ -1,6 +1,16 @@
 'use strict';
 
 module.exports = function(Orden) {
+  Orden.reporte = function(cb) {
+    const ds = Orden.dataSource;
+    const sql = 'SELECT SUM(importe) AS "total", DATE(cierre) AS "fecha" FROM public.orden GROUP BY DATE(cierre)';
+
+    ds.connector.query(sql, (err, reportes) => {
+      if (err) console.error(err);
+      cb(err, reportes);
+    });
+  };
+
   /**
  * Sets 'preparada' property to true
  */
@@ -14,7 +24,7 @@ module.exports = function(Orden) {
             if (err) reject(err);
             resolve(obj);
           });
-        }
+        },
       );
     };
     try {
