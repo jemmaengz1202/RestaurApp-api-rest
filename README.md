@@ -2,6 +2,9 @@
 
 Proyecto para la clase de Programación de BDD en la carrera de Ingeniería en Sistemas Computacionales. Backend para un Restaurant.
 
+## Despliegue
+Para el despliegue, referirse a la documentación de [loopback 3](https://github.com/strongloop/loopback)
+
 ## Tecnologías utilizadas
 
 - loopback3
