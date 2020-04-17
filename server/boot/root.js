@@ -18,9 +18,9 @@ module.exports = function(server) {
             if (roles.includes(1)) {
               resolve('admin');
             } else if (roles.includes(2)) {
-              resolve('mesero');
-            } else if (roles.includes(3)) {
               resolve('cocinero');
+            } else if (roles.includes(3)) {
+              resolve('mesero');
             } else {
               resolve('none');
             }
